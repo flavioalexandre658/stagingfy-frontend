@@ -1,0 +1,87 @@
+Paleta de Cores
+
+Primária: Azul Profundo #0F62FE
+
+Secundária: Ciano Suave #5CC9F5
+
+Background: #F9FAFB (cinza claro)
+
+Texto principal: #111827
+
+Texto secundário: #6B7280
+
+Bordas: #E5E7EB
+
+Feedback:
+
+Sucesso → Verde #22C55E
+
+Erro → Vermelho #EF4444
+
+Aviso → Amarelo #FACC15
+
+✍️ Tipografia
+
+Fonte: Inter (Google Fonts).
+
+Hierarquia:
+
+H1 → text-4xl font-bold text-foreground
+
+H2 → text-2xl font-semibold text-foreground
+
+Subtítulo → text-lg font-medium text-muted
+
+Corpo → text-base text-gray-700
+
+Label/Input → text-sm font-medium text-gray-600
+
+🔘 Botões (via shadcn/ui)
+
+Primário → azul sólido, branco no texto.
+
+Secundário → branco, borda azul, hover azul claro.
+
+Ghost → sem borda, só hover cinza claro.
+
+📦 Cards & Containers
+
+Fundo: branco (bg-white)
+
+Bordas: arredondadas rounded-xl
+
+Sombra: shadow-md
+
+Padding: p-6
+
+Layout interno: flex flex-col gap-4
+
+🌐 Inputs & Forms
+
+bg-white border border-border rounded-md
+
+Foco: ring-2 ring-primary
+
+Texto: text-gray-900
+
+Placeholder: text-gray-400
+
+Labels: text-sm font-medium text-gray-700
+
+🔔 Notificações (react-hot-toast)
+
+Sucesso → bg-green-100 text-green-800 border border-green-300
+
+Erro → bg-red-100 text-red-800 border border-red-300
+
+Info → bg-blue-100 text-blue-800 border border-blue-300
+
+📱 Responsividade
+
+Mobile-first.
+
+Sempre usar breakpoints do Tailwind (sm, md, lg, xl).
+
+Grids fluidos (grid-cols-1 sm:grid-cols-2 lg:grid-cols-3).
+
+Nunca quebrar botões.
