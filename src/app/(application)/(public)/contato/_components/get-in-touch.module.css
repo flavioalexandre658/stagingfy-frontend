@@ -1,0 +1,96 @@
+.wrapper {
+    display: flex;
+    background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+    border-radius: var(--mantine-radius-lg);
+    padding: 4px;
+    border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-8));
+  
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+  
+  .form {
+    flex: 1;
+    padding: var(--mantine-spacing-xl);
+    padding-left: calc(var(--mantine-spacing-xl) * 2);
+    border-left: 0;
+  
+    @media (max-width: 480px) {
+      padding: var(--mantine-spacing-md);
+      padding-left: var(--mantine-spacing-md);
+    }
+  }
+  
+  .fields {
+    margin-top: -12px;
+  }
+  
+  .fieldInput {
+    flex: 1;
+  
+    & + & {
+      margin-left: var(--mantine-spacing-md);
+  
+      @media (max-width: 480px) {
+        margin-left: 0;
+        margin-top: var(--mantine-spacing-md);
+      }
+    }
+  }
+  
+  .fieldsGroup {
+    display: flex;
+  
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+  
+  .contacts {
+    box-sizing: border-box;
+    position: relative;
+    border-radius: var(--mantine-radius-lg);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid transparent;
+    padding: var(--mantine-spacing-xl);
+    flex: 0 0 280px;
+  
+    @media (max-width: 480px) {
+      margin-bottom: var(--mantine-spacing-sm);
+      padding-left: var(--mantine-spacing-md);
+    }
+  }
+  
+  .title {
+    font-size: 34px;
+    font-weight: 800;
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+    padding-bottom: var(--mantine-spacing-lg);
+    @media (max-width: 480px) {
+      font-size: 24px;
+    }
+  }
+  
+  .control {
+    @media (max-width: 480px) {
+      flex: 1;
+    }
+  }
+
+  .description {
+    max-width: 800px;
+    margin: auto;
+  
+    &::after {
+      content: '';
+      display: block;
+      background-color: var(--mantine-color-released-filled);
+      width: 45px;
+      height: 2px;
+      margin-top: var(--mantine-spacing-sm);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

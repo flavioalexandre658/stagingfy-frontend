@@ -1,0 +1,14 @@
+.logoImg img {
+    
+    max-width: 110px;
+}
+
+.logoImg{
+    display: flex;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Alinha verticalmente */
+    max-width: 180px;
+    max-height: 100px;
+    padding: 0.5rem; /* Substitui os valores `px-2` e `my-2` */
+    margin: 0; /* Centraliza horizontalmente o contêiner, se necessário */
+}

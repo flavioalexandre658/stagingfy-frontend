@@ -1,0 +1,123 @@
+"use client"
+
+import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react"
+import { Check, ChevronRight } from "lucide-react"
+import * as React from "react"
+
+import { EnhancedButton, EnhancedButtonContent, EnhancedButtonLeft } from "@/components/ui/enhanced-button"
+import { cn } from "@/lib/utils"
+
+interface StepProps {
+    title: string
+    description?: string
+    isCompleted?: boolean
+    isActive?: boolean
+}
+
+const Step: React.FC<StepProps> = ({ title, description, isCompleted, isActive }) => {
+    return (
+        <div className="flex items-center">
+            <div className="relative flex items-center justify-center">
+                <div
+                    className={cn(
+                        "w-8 h-8 rounded-full border-2 flex items-center justify-center",
+                        isCompleted
+                            ? "border-primary bg-primary text-primary-foreground"
+                            : isActive
+                                ? "border-primary"
+                                : "border-muted",
+                    )}
+                >
+                    {isCompleted ? <Check className="w-4 h-4" /> : <span className="text-sm font-medium">{title[0]}</span>}
+                </div>
+            </div>
+            <div className="ml-4">
+                <p className={cn("text-sm font-medium", isActive || isCompleted ? "text-foreground" : "text-muted-foreground")}>
+                    {title}
+                </p>
+                {description && <p className="text-sm text-muted-foreground">{description}</p>}
+            </div>
+        </div>
+    )
+}
+
+interface StepperProps {
+    steps: Array<{ title: string; description?: string }>
+    currentStep: number
+    onStepChange: (step: number) => void
+    showNavigation?: boolean
+    className?: string
+    navigationLabels?: {
+        previous?: string
+        next?: string
+        finish?: string
+    }
+}
+
+export function Stepper({
+    steps,
+    currentStep,
+    onStepChange,
+    showNavigation = false,
+    className,
+    navigationLabels = {
+        previous: 'Anterior',
+        next: 'Próximo',
+        finish: 'Concluir'
+    }
+}: StepperProps) {
+    return (
+        <div className={cn("w-full max-w-3xl mx-auto", className)}>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                {steps.map((step, index) => (
+                    <React.Fragment key={step.title}>
+                        <Step
+                            title={step.title}
+                            description={step.description}
+                            isCompleted={index < currentStep}
+                            isActive={index === currentStep}
+                        />
+                        {index < steps.length - 1 && (
+                            <div className="hidden md:flex items-center justify-center w-16">
+                                <ChevronRight className="text-muted-foreground" />
+                            </div>
+                        )}
+                    </React.Fragment>
+                ))}
+            </div>
+
+            {showNavigation && (
+                <div className="flex justify-between mt-8">
+                    <EnhancedButton
+                        variant="outline"
+                        onClick={() => onStepChange(currentStep - 1)}
+                        disabled={currentStep === 0}
+                    >
+                        <EnhancedButtonLeft>
+                            <IconArrowLeft size={18} />
+                        </EnhancedButtonLeft>
+                        <EnhancedButtonContent>
+                            {navigationLabels.previous}
+                        </EnhancedButtonContent>
+                    </EnhancedButton>
+                    <EnhancedButton
+                        onClick={() => onStepChange(currentStep + 1)}
+                        disabled={currentStep === steps.length - 1}
+                    >
+                        <EnhancedButtonLeft>
+                            <IconArrowRight size={18} />
+                        </EnhancedButtonLeft>
+                        <EnhancedButtonContent>
+                        {currentStep === steps.length - 1
+                            ? navigationLabels.finish
+                            : navigationLabels.next
+                        }
+                        </EnhancedButtonContent>
+                    </EnhancedButton>
+                </div>
+            )}
+        </div>
+    )
+}
+
+export default Stepper

@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /pagamento
+Disallow: /comprovante
+Disallow: /resgate
+Disallow: /ajuste
+Disallow: /producao
+
+# Host
+Host: https://chatagentes.com
+
+# Sitemaps
+Sitemap: https://chatagentes.com/sitemap.xml

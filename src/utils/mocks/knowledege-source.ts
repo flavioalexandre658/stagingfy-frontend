@@ -1,0 +1,32 @@
+import { KnowledgeSource, KnowledgeSourceConfig } from "@/interfaces/knowledge-source.interface";
+
+export const mockKnowledgeSource: KnowledgeSource = {
+    id: "1",
+    agent_id: "1",
+    type: "text",
+    name: "Teste",
+    status: "completed",
+    config: {
+        questions: ["teste"],
+        answer: "teste",
+        sent_count: 0,
+        last_used_at: undefined,
+        fileType: "text",
+        mimeType: "text/plain",
+        originalName: "teste",
+        originalSize: 0,
+        processedSize: 0,
+        type: "text",
+        isParent: false,
+        autoCrawl: false,
+        lastCrawled: undefined,
+        excludePaths: [],
+        numberOfLinks: 0,
+        includeOnlyPaths: [],
+        previous_mark: "",
+    } as KnowledgeSourceConfig,
+    s3_url: "https://teste.com",
+    created_at: "2021-01-01",
+    updated_at: "2021-01-01",
+    bytes: 0,
+} as KnowledgeSource;

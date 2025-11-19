@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Teste ChatAgentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Teste ChatAgentes</h1>
+
+    <!-- Loader stub apontando para o embed.js local -->
+    <script>
+        (function () {
+            if (!window.chatagentes || window.chatagentes("getState") !== "initialized") {
+                window.chatagentes = function () { (window.chatagentes.q = window.chatagentes.q || []).push(arguments) };
+                window.chatagentes = new Proxy(window.chatagentes, { get: (t, p) => p === "q" ? t.q : (...a) => t(p, ...a) });
+            }
+            function onLoad() {
+                var s = document.createElement("script");
+                s.src = "embed.min.js";   /* ou embed.min.js */
+                s.id = "chatagentes-loader";
+                document.body.appendChild(s);
+            }
+            if (document.readyState === "complete") onLoad();
+            else window.addEventListener("load", onLoad);
+        })();
+    </script>
+
+    <!-- chama o open com o UUID -->
+    <script>
+        chatagentes("open", { slug: "123rifas" });
+    </script>
+</body>
+
+</html>
