@@ -1,0 +1,21 @@
+{
+  "landing": {
+    "title": "Staging virtual com IA, rápido e realista",
+    "subtitle": "Envie sua foto, defina preferências e receba resultados incríveis para interiores e exteriores.",
+    "cta": "Quero saber mais",
+    "bullets": [
+      "Envie sua foto",
+      "Defina suas preferências",
+      "Gere e use o resultado",
+      "Conquiste mais clientes"
+    ],
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "company": "Empresa",
+      "phone": "Telefone (opcional)",
+      "success": "Recebemos seu interesse!",
+      "error": "Não foi possível enviar. Tente novamente."
+    }
+  }
+}

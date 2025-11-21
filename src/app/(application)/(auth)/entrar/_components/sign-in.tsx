@@ -52,18 +52,8 @@ export default function Signin() {
   const handleGoogleLogin = async () => {
     try {
       setGoogleLoading(true)
-      const result = await signIn('google', {
-        redirect: false,
-        callbackUrl: redirect || '/agents'
-      })
-
-      if (result?.error) {
-        toast.error('Erro ao realizar login com Google')
-      } else if (result?.url) {
-        window.location.href = result.url
-      }
-    } catch (error) {
-      toast.error('Erro ao conectar com Google')
+      await signIn('google', { redirect: true, callbackUrl: redirect || '/' })
+    } catch {
     } finally {
       setGoogleLoading(false)
     }
@@ -75,7 +65,7 @@ export default function Signin() {
       const response = await signIn('credentials', { ...values, redirect: false })
       if (response?.ok) {
         toast.success('Seja bem-vindo(a).')
-        window.location.href = redirect || '/agents'
+        window.location.href = redirect || '/'
       } else {
         toast.error('Login falhou. Verifique suas credenciais.')
       }

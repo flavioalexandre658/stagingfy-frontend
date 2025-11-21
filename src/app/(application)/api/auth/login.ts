@@ -1,3 +1,4 @@
+import { signInEmailAction } from "@/actions/auth/sign-in";
 import { User } from "@/interfaces/user.interface";
 
 export const revalidate = 60;
@@ -20,48 +21,21 @@ export async function login(body: LoginBody): Promise<User> {
             hasPassword: !!body.password
         });
 
-        const res = await fetch(
-            `${process.env.NEXT_PUBLIC_API_URL}/auth/login`,
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json",
-                },
-                body: JSON.stringify(body),
-                credentials: 'include'
-            }
-        );
+        const resp = await signInEmailAction({ email: body.email, password: body.password || '' });
 
-        const payload = await res.json();
+        const serverError = (resp as any)?.serverError;
+        const validationErrors = (resp as any)?.validationErrors;
+        const payload = (resp?.data as any)?.data;
 
-        // Log detalhado para debug
-        console.log('Resposta da API:', {
-            status: res.status,
-            ok: res.ok,
-            hasToken: !!payload.access_token,
-            error: payload.error || payload.message
-        });
-
-        if (!res.ok) {
-            const errorMessage = payload.message || `Erro ${res.status} ao realizar login`;
-            console.error('Erro na resposta:', errorMessage);
+        if (serverError || validationErrors || !payload?.token) {
+            const errorMessage = serverError?.message || 'Falha ao realizar login';
             return {
                 error: errorMessage,
-                status: res.status
+                status: serverError?.status || 400
             } as any;
         }
 
-        if (!payload.access_token) {
-            const errorMessage = 'Token de acesso não retornado pela API';
-            console.error(errorMessage);
-            return {
-                error: errorMessage,
-                status: 500
-            } as any;
-        }
-
-        return payload as User;
+        return { access_token: payload.token } as any;
     } catch (error: any) {
         console.error('Erro ao realizar login:', error);
         return {

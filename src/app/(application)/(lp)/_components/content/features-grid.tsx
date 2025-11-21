@@ -65,10 +65,10 @@ export function FeaturesGrid() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Por que Escolher o ChatAgentes para Criar Agentes de IA",
+    name: "Por que Escolher o Stagingfy para Staging Virtual",
     description:
-      "Descubra os motivos que fazem do ChatAgentes a melhor plataforma para criar agentes de inteligência artificial personalizados, chatbots inteligentes e automação empresarial.",
-    url: "https://chatagentes.com",
+      "Descubra por que o Stagingfy é a melhor plataforma para staging virtual com IA, gerando propostas autênticas e rápidas para interiores e exteriores.",
+    url: "https://stagingfy.com",
     mainEntity: MOCKDATA.map((feature) => ({
       "@type": "ItemList",
       name: feature.title,
@@ -86,12 +86,11 @@ export function FeaturesGrid() {
 
       <div className="container mx-auto px-4 py-12">
         <h2 className="text-2xl font-semibold text-center mb-4">
-          Por que Escolher o ChatAgentes para Criar Agentes de IA?
+          Por que Escolher o Stagingfy para Staging Virtual?
         </h2>
 
         <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-          Descubra como o ChatAgentes revoluciona a criação de agentes de inteligência artificial personalizados, 
-          chatbots inteligentes e automação empresarial – tudo de forma simples e intuitiva!
+          Descubra como o Stagingfy acelera a criação de propostas de decoração com IA – simples, rápido e com resultados impressionantes!
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-12">

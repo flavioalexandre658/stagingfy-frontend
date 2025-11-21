@@ -12,7 +12,6 @@ const defaultUser: User = {
     access_token: "",
     created_at: "",
     updated_at: "",
-    agents: [],
 
 };
 

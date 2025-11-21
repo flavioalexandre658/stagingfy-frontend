@@ -12,4 +12,4 @@ export const s3Client = new S3Client({
     },
 });
 
-export const S3_BUCKET_NAME = process.env.S3_BUCKET_NAME || "chatagentes-sources"; 
+export const S3_BUCKET_NAME = process.env.S3_BUCKET_NAME || "stagingfy-sources";

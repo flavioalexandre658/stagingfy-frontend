@@ -19,17 +19,17 @@ export function AboutUs() {
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'ChatAgentes',
-        url: 'https://chatagentes.com',
-        logo: 'https://chatagentes.com/assets/images/icon/icon.svg',
+        name: 'Stagingfy',
+        url: 'https://stagingfy.com',
+        logo: 'https://stagingfy.com/assets/images/icon/icon.svg',
         description:
-            'O ChatAgentes é a plataforma líder para criação de agentes de IA personalizados, chatbots inteligentes e automação de processos empresariais.',
+            'O Stagingfy é a plataforma líder para staging virtual com IA, gerando propostas realistas de design para interiores e exteriores.',
         foundingDate: '2023',
         founders: [{ '@type': 'Person', name: 'Flávio de Jesus' }],
         sameAs: [
-            'https://www.instagram.com/ChatAgentes',
-            'https://www.facebook.com/ChatAgentes',
-            'https://www.twitter.com/ChatAgentes',
+            'https://www.instagram.com/Stagingfy',
+            'https://www.facebook.com/Stagingfy',
+            'https://www.twitter.com/Stagingfy',
         ],
     }
 
@@ -56,11 +56,11 @@ export function AboutUs() {
                     ))}
                 </div>
 
-                <h2 className="text-center text-3xl font-bold mb-4">Sobre o ChatAgentes</h2>
+                <h2 className="text-center text-3xl font-bold mb-4">Sobre o Stagingfy</h2>
 
 
                 <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-                    Conheça a história por trás da plataforma que está revolucionando a criação de agentes de IA personalizados e automação inteligente.
+                    Conheça a história por trás da plataforma que está democratizando o staging virtual com IA para ambientes internos e externos.
                 </p>
 
                 <div className="relative border-l-4 border-vermelho pl-6 text-gray-700 bg-red-50/30 py-6 px-4 rounded-md mb-12">
@@ -69,10 +69,10 @@ export function AboutUs() {
                         <span className="text-sm font-semibold">– CEO, Flávio de Jesus</span>
                     </div>
                     <p className="text-sm leading-relaxed">
-                        O <strong>ChatAgentes</strong> nasceu em 2023 com um propósito revolucionário: democratizar o acesso à inteligência artificial e tornar a criação de agentes de IA personalizados simples e acessível para empresas de todos os tamanhos. Nossa missão é empoderar organizações com chatbots inteligentes, automação de processos e soluções de IA que transformam a experiência do cliente.
+                        O <strong>Stagingfy</strong> nasceu em 2023 com um propósito claro: tornar o staging virtual com IA acessível e poderoso para profissionais e empresas de todos os tamanhos.
                         <br />
                         <br />
-                        Com uma plataforma intuitiva e tecnologia de ponta, o ChatAgentes permite que qualquer empresa crie agentes de IA sofisticados em minutos, sem necessidade de conhecimento técnico. Nossos agentes podem ser integrados a WhatsApp, websites, sistemas internos e muito mais. Hoje, somos a escolha de empresas inovadoras que buscam eficiência, produtividade e excelência no atendimento. Junte-se a nós e transforme seu negócio com o poder da inteligência artificial!
+                        Com uma plataforma intuitiva e tecnologia de ponta, o Stagingfy permite que qualquer pessoa gere propostas de design realistas a partir de fotos de ambientes, em minutos. Hoje, somos a escolha de profissionais e empresas que buscam agilidade e qualidade na apresentação de projetos.
                     </p>
                 </div>
 

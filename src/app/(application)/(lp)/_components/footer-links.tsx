@@ -12,7 +12,7 @@ const footerData = [
     {
         title: 'PRODUTO',
         links: [
-            { label: 'Agentes de IA', link: `${process.env.NEXT_PUBLIC_BASE_URL}/agents` },
+            { label: 'Staging virtual', link: `${process.env.NEXT_PUBLIC_BASE_URL}/` },
             { label: 'Entrar', link: `${process.env.NEXT_PUBLIC_BASE_URL}/entrar` },
             { label: 'Cadastrar', link: `${process.env.NEXT_PUBLIC_BASE_URL}/cadastrar` },
         ],
@@ -27,8 +27,8 @@ const footerData = [
     {
         title: 'EMPRESA',
         links: [
-            { label: 'Política de privacidade', link: 'https://chatagentes.com/politica-de-privacidade/' },
-            { label: 'Termos de serviço', link: 'https://chatagentes.com/termos-de-uso/' },
+            { label: 'Política de privacidade', link: 'https://stagingfy.com/politica-de-privacidade/' },
+            { label: 'Termos de serviço', link: 'https://stagingfy.com/termos-de-uso/' },
         ],
     },
 ]
@@ -51,7 +51,7 @@ export function FooterLinks() {
                             <Logo width={32} className='text-white'/>
                         </div>
                         <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                            © {currentYear} ChatAgentes, Inc.
+                            © {currentYear} Stagingfy, Inc.
                         </p>
                         
                         {/* Botão de contato */}
@@ -69,7 +69,7 @@ export function FooterLinks() {
                                 variant="ghost"
                                 size="icon"
                                 className="text-gray-400 hover:text-white hover:bg-gray-800 w-8 h-8"
-                                onClick={() => window.open('https://linkedin.com/company/chatagentes', '_blank')}
+                                onClick={() => window.open('https://linkedin.com/company/stagingfy', '_blank')}
                                 aria-label="LinkedIn"
                             >
                                 <FiLinkedin size={16} />
@@ -78,7 +78,7 @@ export function FooterLinks() {
                                 variant="ghost"
                                 size="icon"
                                 className="text-gray-400 hover:text-white hover:bg-gray-800 w-8 h-8"
-                                onClick={() => window.open('https://instagram.com/chatagentes', '_blank')}
+                                onClick={() => window.open('https://instagram.com/stagingfy', '_blank')}
                                 aria-label="Instagram"
                             >
                                 <FiInstagram size={16} />
@@ -87,7 +87,7 @@ export function FooterLinks() {
                                 variant="ghost"
                                 size="icon"
                                 className="text-gray-400 hover:text-white hover:bg-gray-800 w-8 h-8"
-                                onClick={() => window.open('https://twitter.com/chatagentes', '_blank')}
+                                onClick={() => window.open('https://twitter.com/stagingfy', '_blank')}
                                 aria-label="Twitter"
                             >
                                 <FiTwitter size={16} />
@@ -96,7 +96,7 @@ export function FooterLinks() {
                                 variant="ghost"
                                 size="icon"
                                 className="text-gray-400 hover:text-white hover:bg-gray-800 w-8 h-8"
-                                onClick={() => window.open('https://facebook.com/chatagentes', '_blank')}
+                                onClick={() => window.open('https://facebook.com/stagingfy', '_blank')}
                                 aria-label="Facebook"
                             >
                                 <FiFacebook size={16} />

@@ -4,33 +4,32 @@ import { getServerSession } from "next-auth";
 import { Fragment } from "react";
 
 import { authOptions } from "../../../../libs/auth-options";
-import { FaqSimple } from "./_components/content/faq-simple";
-import { FeaturesCards } from "./_components/content/feature-cards";
-import { FeatureSimple } from "./_components/content/feature-simple";
-import { HeroBullets } from "./_components/content/hero-bullets";
-import { HowItWorks } from "./_components/content/how-it-works";
-import { PricingPlans } from "./_components/content/pricing-plans";
-import { Reviews } from "./_components/content/reviews";
 import { FooterLinks } from "./_components/footer-links";
+import { HeroShowcase } from "./_components/hero-showcase";
 import { LandingHeader } from "./_components/landing-header";
+import { LeadForm } from "./_components/lead-form";
+import { OfferComponents } from "./_components/offer-components";
+import { OfferLogosMarquee } from "./_components/offer-logos-marquee";
+import { OfferReviews } from "./_components/offer-reviews";
+import { OfferSteps } from "./_components/offer-steps";
+import { StagingGenerator } from "./_components/staging-generator";
 
 export const metadata: Metadata = {
-  title: `Crie agentes de IA personalizados`,
-  description: `Com o Chat Agentes você constrói agentes de inteligência artificial treinados com seus próprios dados. Use textos, documentos, sites ou FAQs para treinar seu chatbot. Comece grátis!`,
+  title: `Staging virtual com IA para interiores e exteriores`,
+  description: `Faça upload da foto, defina preferências e gere ambientes decorados realistas com IA.`,
   keywords: [
-    "chat agentes",
-    "chatbots com IA",
-    "agente de IA personalizado",
-    "chat treinado com dados",
-    "criar chatbot com conteúdo próprio",
-    "inteligência artificial para atendimento",
-    "faq automatizado",
-    "chat para site",
-    "bot com IA em português"
+    "staging virtual",
+    "decoração com IA",
+    "interiores com IA",
+    "exteriores com IA",
+    "stagingfy",
+    "renderização de ambientes",
+    "propostas de design",
+    "upload de foto",
+    "preferências de estilo",
+    "gerar resultado"
   ],
-  alternates: {
-    canonical: "https://www.stagingfy.com",
-  },
+  alternates: { canonical: "https://stagingfy.com" },
 
   robots: {
     index: true,
@@ -45,12 +44,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  authors: [
-    {
-      name: "Equipe ChatAgentes",
-      url: "https://www.stagingfy.com",
-    },
-  ],
+  authors: [{ name: "Equipe Stagingfy", url: "https://stagingfy.com" }],
 };
 
 export const viewport = {
@@ -68,15 +62,11 @@ export default async function Home() {
   return (
     <Fragment>
       <LandingHeader isAuthenticated={isAuthenticated} />
-      <HeroBullets />
-      <FeatureSimple />
-      <div className="bg-gray-50">
-        <FeaturesCards />
-        <HowItWorks />
-      </div>
-      <Reviews />
-      <PricingPlans />
-      <FaqSimple />
+      <HeroShowcase />
+      <OfferSteps />
+      <OfferComponents />
+      <StagingGenerator />
+      <LeadForm />
       <FooterLinks />
     </Fragment>
   );

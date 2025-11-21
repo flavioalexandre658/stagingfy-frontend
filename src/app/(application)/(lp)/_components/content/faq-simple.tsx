@@ -15,29 +15,29 @@ export function FaqSimple() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "O que é o Chat Agentes?",
+        "name": "O que é o Stagingfy?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text":
-            "O Chat Agentes é uma plataforma que permite criar agentes de IA treinados com seus próprios dados, sem necessidade de programação. Ideal para atendimento ao cliente, suporte interno e automação inteligente.",
+            "text":
+            "O Stagingfy é uma plataforma de staging virtual com IA. Envie fotos dos seus ambientes e receba propostas de decoração internas e externas, de forma rápida e realista.",
         },
       },
       {
         "@type": "Question",
-        "name": "Preciso saber programar para usar?",
+        "name": "Preciso saber design para usar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text":
-            "Não! O Chat Agentes foi desenvolvido para ser utilizado por qualquer pessoa, com interface simples e intuitiva. Você pode treinar e implantar um agente com poucos cliques.",
+            "text":
+            "Não! O Stagingfy foi criado para ser usado por qualquer pessoa. Basta enviar uma foto e escolher estilos; a IA faz o restante.",
         },
       },
       {
         "@type": "Question",
-        "name": "Como o agente aprende com meus dados?",
+        "name": "Como funciona o staging virtual?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text":
-            "Basta enviar documentos, links ou textos, e nosso sistema transforma essas fontes em conhecimento para o agente responder com precisão.",
+            "text":
+            "Faça upload da foto, defina preferências e em poucos segundos receba imagens renderizadas com novas propostas de layout e decoração.",
         },
       },
       {
@@ -76,19 +76,19 @@ export function FaqSimple() {
         </div>
 
         <h2 className="text-center text-2xl sm:text-3xl font-semibold text-gray-900 mb-8">
-          Perguntas comuns sobre o Chat Agentes
+          Perguntas comuns sobre o Stagingfy
         </h2>
 
         <Accordion
           type="single"
           collapsible
-          defaultValue="chat-agentes"
+          defaultValue="stagingfy"
           className="space-y-2"
         >
-          <AccordionItem value="chat-agentes">
-            <AccordionTrigger>O que é o Chat Agentes?</AccordionTrigger>
+          <AccordionItem value="stagingfy">
+            <AccordionTrigger>O que é o Stagingfy?</AccordionTrigger>
             <AccordionContent>
-              É uma plataforma completa para criar agentes de IA personalizados com seus próprios dados, ideal para atendimento automatizado e suporte inteligente.
+              É uma plataforma de staging virtual com IA para gerar propostas realistas de decoração e layout a partir de fotos.
             </AccordionContent>
           </AccordionItem>
 

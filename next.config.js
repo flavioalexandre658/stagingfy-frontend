@@ -41,7 +41,7 @@ const nextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
           {
             key: 'Content-Security-Policy',
-            value: "script-src 'self' https://chatagentes.com; frame-src https://chatagentes.com;"
+            value: "script-src 'self' https://stagingfy.com; frame-src https://stagingfy.com;"
           }
         ]
       }

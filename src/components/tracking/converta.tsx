@@ -9,7 +9,7 @@ const Converta = () => {
           var sUsrAg = navigator.userAgent;
           
           if (sUsrAg.indexOf("converta") > -1) {
-            window.location.href = "https://chatagentes.com/entrar";
+            window.location.href = "https://stagingfy.com/entrar";
           } else {
             // sugestão: avisar que determinado cupom só pode ser usado no app.
           }

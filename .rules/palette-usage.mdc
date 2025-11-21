@@ -1,0 +1,33 @@
+# Guia de Uso da Paleta de Cores (Stagingfy)
+
+## Fundos
+- Hero (dark): `from #1b1b21 via #23232c to #121217` usando `bg-gradient-to-b`.
+- Seções claras: `from gray-50 to gray-100` com `bg-gradient-to-b`.
+- Cards escuros: `bg-gray-800/70` com `border-gray-700`.
+- Cards claros: `bg-white` com `border-gray-200`.
+
+## Acentos
+- CTA principal: `bg-ametista-600` e `hover:bg-ametista-700`, texto `text-white`.
+- “Novo”/pills: `bg-primary-600` ou `bg-ametista-600` conforme contexto.
+- Rating: ícones `text-green-500`.
+
+## Tipografia
+- Títulos escuros: `text-white` em fundos dark; `text-gray-900` em fundos claros.
+- Subtítulos: `text-gray-300` no dark; `text-gray-600` no light.
+
+## Componentes
+- `Pill`: variantes `primary`, `outline`, `muted` para emphasizar funcionalidades.
+- `TrustRow`: métricas com `bg-gray-800/70` e textos `text-gray-100`/`text-gray-300`.
+- Steps: ícones sobre `bg-ametista-600`, container `bg-white/80` e `border-gray-200`.
+- Reviews: cards `bg-white` e borda `border-gray-200`, estrelas verdes.
+
+## Quando usar
+- Dark: páginas hero, destaque inicial e seções de impacto visual.
+- Light: passos, social proof, reviews e recursos detalhados.
+- Ametista: botões de ação, chips de destaque e ícones principais.
+- Verde: feedback positivo, avaliações, confirmações.
+
+## Consistência
+- Aplicar `max-w-7xl` e `px-4` em contêineres.
+- Bordas arredondadas: `rounded-xl` ou `rounded-2xl`.
+- Espaçamentos: `py-8–12` em seções; `gap-4–8` em grids.

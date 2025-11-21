@@ -9,7 +9,7 @@ import { updateConversation } from '@/actions/conversation/update-conversation';
 import { Conversation, ConversationMessage } from '@/interfaces/agent.interface';
 import { ChatMessage, LocalChatState, SavedChat, SavedChatReference } from '@/interfaces/chat.interface';
 
-const LOCAL_STORAGE_KEY = '@chat-agentes:chat-references';
+const LOCAL_STORAGE_KEY = '@stagingfy:chat-references';
 
 export function useEnhancedChat(agent_id: string, agent_name: string) {
     const [state, setState] = useState<LocalChatState>({ chatReferences: [] });
@@ -310,7 +310,7 @@ export function useEnhancedChat(agent_id: string, agent_name: string) {
             }
         }
 
-        return allChats.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+        return allChats.sort((a, b) => (new Date(b.updated_at || b.created_at).getTime()) - (new Date(a.updated_at || a.created_at).getTime()));
     }, [state.chatReferences]);
 
     // Obtém os chats arquivados (para compatibilidade, mas agora retorna todas)
@@ -332,4 +332,4 @@ export function useEnhancedChat(agent_id: string, agent_name: string) {
         getArchivedChats,
         getAllSavedChats,
     };
-} 
+}

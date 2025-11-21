@@ -5,11 +5,10 @@ export interface User {
   id: string;
   userName: string;
   email: string;
-  mobileNumber: string;
+  mobileNumber?: string;
   access_token: string;
   created_at: string;
   updated_at: string;
-  agents: Agent[];
   plan?: Plan;
   subscription?: UserSubscription;
 }

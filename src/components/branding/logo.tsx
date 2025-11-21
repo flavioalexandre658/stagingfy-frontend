@@ -37,7 +37,7 @@ export default function Logo({ width = 40, height = 80, customLogo = '', classNa
               textTransform: 'capitalize'
             }}
           >
-            ChatAgentes
+            {process.env.NEXT_PUBLIC_NAME_PROJECT || 'Stagingfy'}
           </span>
         )}
       </div>

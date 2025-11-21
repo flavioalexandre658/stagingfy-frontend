@@ -8,21 +8,21 @@ import { Badge } from '@/components/ui/badge'
 const data = [
   {
     image: '/assets/images/features/llm-integrations.svg',
-    title: 'Projetado para IA de verdade',
+    title: 'Staging virtual de alta qualidade',
     description:
-      'Modelos de linguagem com raciocínio avançado, capazes de responder com precisão usando seu conteúdo.',
+      'Resultados autênticos e realistas para interiores e exteriores, prontos para apresentação.',
   },
   {
     image: '/assets/images/features/simple-ui.svg',
     title: 'Feito para ser simples',
     description:
-      'Gerencie agentes com uma interface amigável e visual. Não precisa saber programar.',
+      'Envie fotos e escolha estilos em uma interface amigável. Sem complicação.',
   },
   {
     image: '/assets/images/features/secure.svg',
     title: 'Pensado para segurança',
     description:
-      'Criptografia de ponta e conformidade rigorosa para proteger seus dados e dos seus clientes.',
+      'Privacidade garantida e segurança para seus arquivos e imagens.',
   },
 ]
 
@@ -34,11 +34,11 @@ export function FeaturesCards() {
       </Badge>
 
       <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-        A plataforma completa para agentes inteligentes
+        Staging virtual com IA, do upload ao resultado
       </h2>
       <p className="text-gray-500 text-base mb-10">
-        O Chat Agentes foi criado para facilitar a criação de agentes com IA treinada,
-        oferecendo controle, simplicidade e segurança.
+        O Stagingfy foi criado para facilitar a geração de propostas de design com IA,
+        com agilidade, simplicidade e segurança.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

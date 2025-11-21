@@ -72,7 +72,7 @@ export const authOptions: NextAuthOptions = {
           }
 
           const user = await me(token);
-
+          console.log('Dados do usuário:', user);
           return {
             id: user.data?.id,
             userName: user.data?.userName,
@@ -124,7 +124,7 @@ export const authOptions: NextAuthOptions = {
       }
 
       // Atualizar dados do usuário a cada requisição para garantir informações atualizadas
-      if (token.access_token && token.id) {
+      if (token.access_token) {
         try {
           const userData = await me(token.access_token as string);
 
@@ -173,6 +173,7 @@ export const authOptions: NextAuthOptions = {
       session.user.subscription = token.subscription;
       // Passar flag de expiração para a sessão
       (session as any).expired = token.expired;
+
       return session;
     },
   },

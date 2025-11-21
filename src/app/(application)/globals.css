@@ -1,6 +1,4 @@
-@layer tailwind {
-  @tailwind base;
-}
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -52,21 +50,7 @@ body {
   background-color: #a8bbbf;
 }
 
-ul {
-  list-style: disc; /* Define um marcador de lista não ordenada (círculo) */
-}
 
-ol {
-  list-style: decimal; /* Define números para a lista ordenada */
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav ol {
-  list-style: none;
-}
 
 .inter{
   font-family: var(--font-inter);

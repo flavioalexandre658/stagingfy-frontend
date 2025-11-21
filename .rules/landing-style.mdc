@@ -1,0 +1,35 @@
+# Padrão de Estilização da Landing Page
+
+## Layout
+- Contêiner central em `max-w-6xl` com `px-4` e espaçamento vertical `py-10`–`py-16`.
+- Seções principais usam grid `md:grid-cols-2` para hero + imagem ou hero + formulário.
+- Cartões com `rounded-xl`, `border`, `bg-card`, `shadow-sm` para blocos de conteúdo.
+
+## Tipografia
+- Títulos com `text-3xl md:text-4xl font-bold tracking-tight`.
+- Subtítulos com `text-muted-foreground text-base md:text-lg`.
+- Itens de apoio e bullets com `text-sm`.
+
+## Cores
+- Fundo suave usando `bg-gradient-to-b from-white to-gray-50` nas seções.
+- Realces em bullets com cores sólidas (`bg-green-500`, `bg-blue-500`, `bg-purple-500`, `bg-rose-500`).
+- Texto secundário usa `text-muted-foreground`.
+
+## Componentização
+- Componentes reutilizáveis seguem padrão shadcn: `Card`, `Button`, `Input`, `Label`.
+- Estilos utilitários via Tailwind, sem CSS externo quando possível.
+- Componentes específicos da página ficam em `src/app/(application)/(lp)/_components`.
+
+## Formulário
+- Validação com `zod` e `react-hook-form` (`zodResolver`).
+- Exibição de erros abaixo dos inputs com `text-xs text-red-600`.
+- Botão de ação ocupa largura total `w-full`.
+
+## Conteúdo
+- Textos em português vindos de `messages/pt.json`.
+- Hero apresenta título, subtítulo e lista de benefícios.
+- Formulário coleta `nome`, `e-mail`, `empresa` e `telefone (opcional)`.
+
+## Acessibilidade
+- `Label` sempre associado ao `Input` via `htmlFor` / `id`.
+- Botões com estados de carregamento e desabilitado.

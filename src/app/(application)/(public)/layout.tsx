@@ -96,8 +96,8 @@ export const metadata: Metadata = {
     // Autores
     authors: [
         {
-            name: "ChatAgentes",
-            url: "https://chatagentes.com",
+            name: "Stagingfy",
+            url: "https://stagingfy.com",
         },
     ],
 };

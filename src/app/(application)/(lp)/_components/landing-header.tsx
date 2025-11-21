@@ -69,7 +69,7 @@ export function LandingHeader({ isAuthenticated }: LandingHeaderProps) {
                 </Button>
                 <Button
                   variant='default'
-                  className="className='bg-released-800 transition-all"
+                  className="bg-primary-600 hover:bg-primary-700 text-primary-foreground"
                   onClick={() => router.push('/cadastro')}
                 >
                   Comece agora
@@ -130,7 +130,7 @@ export function LandingHeader({ isAuthenticated }: LandingHeaderProps) {
                         </Button>
                         <Button
                           variant='default'
-                          className='bg-released-800'
+                          className='bg-primary-600 hover:bg-primary-700 text-primary-foreground'
                           onClick={() => {
                             setDrawerOpen(false)
                             router.push('/cadastro')

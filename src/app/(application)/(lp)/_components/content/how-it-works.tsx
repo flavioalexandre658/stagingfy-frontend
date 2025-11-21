@@ -10,37 +10,37 @@ import { cn } from '@/lib/utils'
 const steps = [
   {
     step: '01',
-    title: 'Crie e publique seu agente',
+    title: 'Envie sua foto do ambiente',
     description:
-      'Treine um agente com seus dados de negócio, configure suas ações e publique com um clique.',
+      'Faça upload de uma imagem do espaço interno ou externo que deseja transformar.',
     image: '/assets/images/how-it-works/step1.svg',
   },
   {
     step: '02',
-    title: 'O agente resolve dúvidas automaticamente',
+    title: 'Defina suas preferências',
     description:
-      'O agente responde perguntas usando as fontes treinadas, sem intervenção humana.',
+      'Escolha estilos, cores e referências para orientar a geração das propostas.',
     image: '/assets/images/how-it-works/step2.svg',
   },
   {
     step: '03',
-    title: 'Refine e melhore com feedbacks',
+    title: 'Gere resultados realistas',
     description:
-      'Analise interações e melhore continuamente as respostas do agente.',
+      'Receba imagens renderizadas com novas propostas de layout e decoração em segundos.',
     image: '/assets/images/how-it-works/step3.svg',
   },
   {
     step: '04',
-    title: 'Encaminhe para humanos quando necessário',
+    title: 'Compartilhe e apresente',
     description:
-      'Situações complexas podem ser automaticamente direcionadas para atendimento humano.',
+      'Baixe, compartilhe e use as imagens geradas em propostas e apresentações ao cliente.',
     image: '/assets/images/how-it-works/step4.svg',
   },
   {
     step: '05',
-    title: 'Analise tudo com insights e métricas',
+    title: 'Itere e refine',
     description:
-      'Visualize dados de performance e melhore a experiência do usuário.',
+      'Faça ajustes finos rapidamente e gere novas variações conforme a necessidade.',
     image: '/assets/images/how-it-works/step5.svg',
   },
 ]
@@ -59,11 +59,10 @@ export function HowItWorks() {
           {/* Etapas à esquerda */}
           <div>
             <h2 className="text-3xl font-extrabold mb-4">
-              Uma solução completa para agentes conversacionais
+              Como funciona o Stagingfy
             </h2>
             <p className="text-gray-600 mb-8">
-              O Chat Agentes ajuda sua empresa a resolver dúvidas, automatizar
-              fluxos e melhorar o suporte com inteligência real.
+              Com Stagingfy, você transforma ambientes com IA em três passos rápidos.
             </p>
 
             <div className="space-y-3">

@@ -4,7 +4,7 @@ import { ChatBubblesConfig, ChatConfig, ChatHeaderConfig } from "@/interfaces/ch
 export const mockAgent: Agent = {
     id: "e12f6c6a-5b8e-4f3c-a1a1-0d27f2db6abc",
     user_id: "f9b3a6c9-1c23-4d4d-a3c2-f01fd1234abc",
-    name: "Chat Agentes",
+    name: "Stagingfy",
     description: "Assistente virtual para atendimento ao cliente.",
     status: "active",
     model: "gpt-4",
@@ -14,7 +14,7 @@ export const mockAgent: Agent = {
         fontSize: "16px",
         font: "Inter",
         header: {
-            title: "Chat agentes",
+            title: "Stagingfy",
             iconUrl: "/assets/images/icon/icon.svg",
             backgroundColor: "#F3F4F6",
             textColor: "#000000",
@@ -47,8 +47,8 @@ export const mockAgent: Agent = {
     personalization: {
         toneOfVoice: "amigável",
     } as AgentPersonalization,
-    embed_url: "https://chatagentes.com/embed/chat-agentes",
-    slug: "chat-agentes",
+    embed_url: "https://stagingfy.com/embed/stagingfy",
+    slug: "stagingfy",
     is_public: true,
     access_key: "abc123",
     created_at: new Date().toISOString(),

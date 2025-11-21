@@ -8,7 +8,7 @@ Disallow: /ajuste
 Disallow: /producao
 
 # Host
-Host: https://chatagentes.com
+Host: https://stagingfy.com
 
 # Sitemaps
-Sitemap: https://chatagentes.com/sitemap.xml
+Sitemap: https://stagingfy.com/sitemap.xml

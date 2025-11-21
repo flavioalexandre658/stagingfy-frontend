@@ -6,14 +6,14 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { signIn } from 'next-auth/react'
+import { useAction } from 'next-safe-action/hooks'
 import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { FiLock, FiMail, FiPhone, FiUser, FiUserCheck } from 'react-icons/fi'
 import { boolean, z } from 'zod'
 
-import { createCheckout } from '@/actions/plans/create-checkout'
-import { register } from '@/app/(application)/api/auth/register'
+import { signUpEmailAction } from '@/actions/auth/sign-up'
 import Logo from '@/components/branding/logo'
 import { Checkbox } from '@/components/ui/checkbox'
 import { EnhancedButton, EnhancedButtonContent, EnhancedButtonLeft } from '@/components/ui/enhanced-button'
@@ -107,58 +107,30 @@ export default function Signup() {
     form.setValue('phone', val)
   }
 
+  const { executeAsync } = useAction(signUpEmailAction)
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setLoading(true)
     try {
-      const userData = {
-        userName: values.name,
+      const payload = {
+        name: values.name,
         email: values.email,
         password: values.password,
-        mobileNumber: values.phone.replace(/\D/g, ''),
-        source,
-        source_url: sourceUrl,
-        ip: ip || '',
+        phone: values.phone.replace(/\D/g, ''),
       }
-
-      const user: any = await register(userData)
-
-      if (!user.error) {
-        const response = await signIn('credentials', {
-          email: values.email,
-          password: values.password,
-          redirect: false,
-        })
-
-        if (response?.ok) {
+      const resp = await executeAsync(payload)
+      const { data, serverError, validationErrors } = resp as any
+      if (data && !serverError && !validationErrors) {
+        const loginResp = await signIn('credentials', { email: values.email, password: values.password, redirect: false })
+        if (loginResp?.ok) {
           toast.success('Seja bem-vindo(a)!')
-
-          // Se há um plan_id, criar checkout automático
-          if (planId) {
-            try {
-              const checkoutResponse = await createCheckout({ planId })
-              if (checkoutResponse.success && checkoutResponse.data?.url) {
-                // Redirecionar para o checkout do Stripe
-                window.location.href = checkoutResponse.data.url
-                return
-              } else {
-                toast.error('Erro ao criar checkout. Redirecionando para dashboard.')
-              }
-            } catch (checkoutError) {
-              console.error('Erro ao criar checkout:', checkoutError)
-              toast.error('Erro ao criar checkout. Redirecionando para dashboard.')
-            }
-          }
-
-          // Redirecionamento padrão se não há plan_id ou erro no checkout
-          window.location.href = redirect || '/agents/create/source/document'
+          window.location.href = redirect || '/'
         } else {
           toast.error('Falha ao realizar login após cadastro.')
         }
       } else {
-        toast.error(user.error || 'Falha ao realizar cadastro.')
+        toast.error(serverError?.message || 'Falha ao realizar cadastro.')
       }
     } catch (error) {
-      console.error(error)
       toast.error('Erro ao tentar se conectar ao servidor.')
     } finally {
       setLoading(false)

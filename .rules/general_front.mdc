@@ -14,15 +14,11 @@ Tailwind CSS
 
 shadcn/ui
 
-BetterAuth (via API do backend) para autenticação
+BetterAuth (via API do backend) (api.stagingfy.com) para autenticação
 
 react-hook-form + Zod para formulários e validações
 
 react-hot-toast para notificações
-
-Upload direto para backend → S3
-
-SWR/React Query para estados assíncronos e cache de jobs
 
 Sentry para captura de erros de UI
 
@@ -36,12 +32,8 @@ Componentes específicos de página ficam em _components.
 
 Componentes globais ficam em src/components.
 
-Mensagens e textos de UI precisam estar traduzidos em messages/pt.json.
-
 Sempre usar Tailwind para estilos.
 
 Sempre usar componentes do shadcn/ui quando possível.
-
-Upload de imagens deve ser validado (formato e resolução).
 
 Código limpo → sem variáveis/imports não usados, sem duplicação.

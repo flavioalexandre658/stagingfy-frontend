@@ -95,7 +95,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: `${process.env.NEXT_PUBLIC_NAME_PROJECT} Team`,
-      url: "https://chatagentes.com",
+      url: "https://stagingfy.com",
     },
   ],
 };

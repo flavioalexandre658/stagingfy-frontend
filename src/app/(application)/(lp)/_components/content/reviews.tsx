@@ -9,27 +9,27 @@ import { Card, CardContent } from "@/components/ui/card";
 const reviews = [
   {
     name: "Ana Oliveira",
-    role: "Equipe de Suporte",
+    role: "Designer de Interiores",
     review:
-      "Com o Chat Agentes, conseguimos reduzir o tempo de resposta ao cliente em mais de 70%. A IA responde com assertividade e ajuda real. Impressionante!",
+      "Com o Stagingfy, apresentei propostas em minutos e aumentei minha taxa de conversão. Os resultados são super realistas!",
   },
   {
     name: "Bruno Martins",
-    role: "CTO na TechFlow",
+    role: "Arquiteto na TechFlow",
     review:
-      "Integrar o Chat Agentes foi simples e impactou diretamente nosso atendimento. Automatizamos dúvidas repetitivas e ganhamos mais tempo para focar no que importa.",
+      "O Stagingfy acelerou nossa pré-venda. Em poucos cliques geramos visualizações que encantam os clientes.",
   },
   {
     name: "Juliana Rocha",
     role: "CEO na LojaZen",
     review:
-      "A interface do Chat Agentes é incrivelmente fácil. Em menos de 10 minutos, nosso agente estava treinado e pronto para atuar com nossos clientes.",
+      "A interface do Stagingfy é incrivelmente simples. Em menos de 10 minutos, tínhamos propostas prontas para o catálogo.",
   },
   {
     name: "Marcos Lima",
-    role: "Analista de Dados",
+    role: "Gestor Comercial",
     review:
-      "O painel de insights do Chat Agentes nos permite acompanhar a performance do agente em tempo real. Hoje tomamos decisões baseadas em dados concretos!",
+      "Com Stagingfy, melhoramos a apresentação e fechamos mais negócios. Os clientes entendem o potencial do ambiente imediatamente.",
   },
 ];
 
